@@ -155,14 +155,14 @@ def start_buzzing():
     """
     Starts buzzing after the sound sensor is triggered (until "/api/reset" stops it)
     """
-    set_outputs(buzzer=1, led=1)  # 你的约定：1=响；同时点亮LED
+    set_outputs(buzzer=1, led=1) 
     log("info", "buzzer ON (continuous until reset)")
 
 def stop_buzzing():
     """
     Stops buzzing (to be called when reset)
     """
-    set_outputs(buzzer=0, led=0)  # 你的约定：0=静音；LED灭
+    set_outputs(buzzer=0, led=0)
     log("info", "buzzer OFF (via reset)")
 
 def on_edge(_):
